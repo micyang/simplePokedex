@@ -5,5 +5,5 @@ var request = Promise.promisify(require('request'));
 Promise.promisifyAll(request);
 
 module.exports.promisePokemon = function(url) {
-    return request(url);
+  return request(url);
 }

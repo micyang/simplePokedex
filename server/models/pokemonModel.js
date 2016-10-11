@@ -4,9 +4,9 @@ var Schema = mongoose.Schema;
 
 var pokemonSchema = new Schema({
 
-    name: String,
-    pkmnSprite: String,
-    pkmnNum: Number
+  name: String,
+  pkmnSprite: String,
+  pkmnNum: Number
 
 
 });
