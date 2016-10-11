@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="pokedex">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--<script src="app.js"></script>-->
-    <script src="components/Kanto/pokedex.js"></script>
+    <script src="app.js"></script>
+    <script src="components/kanto/pokedex.js"></script>
   </head>
-  <body ng-app="pokedex">
-    <h3>Pokedex Kanto Edition</h3>
-    <div ng-controller="pokedexCtrl as vm">
-      <div> {{ vm.status }} </div>
-      <input type="text" ng-model="search" placeholder="Pokemon">
-      <div class="container-fluid row">
-        <div ng-repeat="pkmn in vm.pkmns | orderBy: 'pkmnNum' | filter:search" class="col-md-1 starter" ng-class="{'generic':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false"> 
-          <img src="{{pkmn.pkmnSprite}}">
-          <div>{{pkmn.name}}</div>
-          <div>{{pkmn.pkmnNum}}</div>
-        </div>
+  <body>
+    <div class="container">
+      <div class="row">
+        <ul class="nav nav-pills">
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/kanto">Kanto</a></li>
+          <li><a href="#/national">National</a></li>
+        </ul>
       </div>
+    </div>
+
+    <div ng-controller="mainController as vm">
+      <div ui-view></div>
     </div>
   </body>
 </html>

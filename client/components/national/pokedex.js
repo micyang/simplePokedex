@@ -1,6 +1,4 @@
-var pokedex = angular.module('pokedex', []);
-
-pokedex.controller('pokedexCtrl', function ($http) {
+pokedex.controller('nationalPokedexCtrl', function ($http) {
   var vm = this;
   vm.pkmns;
   vm.status = "Loading...";
@@ -12,9 +10,8 @@ pokedex.controller('pokedexCtrl', function ($http) {
       vm.status = "";
     }, function (err) {
   });
-
 });
 
-pokedex.factory('pokedexFactory', function () {
+pokedex.factory('nationalPokedexFactory', function () {
     
 });
