@@ -3,10 +3,9 @@
   <div> {{ vm.status }} </div>
   <input type="text" ng-model="search" placeholder="Pokemon">
   <div class="container-fluid row">
-    <div ng-repeat="pkmn in vm.pkmns | orderBy: 'pkmnNum' | filter:search" class="col-md-1 starter" ng-class="{'generic':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false"> 
-      <img src="{{pkmn.pkmnSprite}}">
+    <div ng-repeat="pkmn in vm.pkmns" class="col-md-1 starter" ng-class="{'generic':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false"> 
       <div>{{pkmn.name}}</div>
-      <div>{{pkmn.pkmnNum}}</div>
+      <div>{{pkmn.url}}</div>
     </div>
   </div>
 </div>
