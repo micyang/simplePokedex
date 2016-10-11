@@ -1,0 +1,7 @@
+.generic {
+    box-shadow: inset 0 0 1em gold, 0 0 1em red;
+}
+
+.starter {
+    border: 1px solid black;
+}
