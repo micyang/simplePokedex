@@ -12,8 +12,9 @@
         <h3>Pokedex Kanto Edition</h3>
         <div ng-controller="pokedexCtrl as vm">
             <div> {{ vm.status }} </div>
+            <input type="text" ng-model="search" placeholder="Pokemon">
             <div class="container-fluid row">
-                <div ng-repeat="pkmn in vm.pkmns | orderBy: 'pkmnNum'" class="col-md-1 starter" ng-class="{'generic':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false"> 
+                <div ng-repeat="pkmn in vm.pkmns | orderBy: 'pkmnNum' | filter:search" class="col-md-1 starter" ng-class="{'generic':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false"> 
                     <img src="{{pkmn.pkmnSprite}}">
                     <div>{{pkmn.name}}</div>
                     <div>{{pkmn.pkmnNum}}</div>
