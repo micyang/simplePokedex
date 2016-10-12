@@ -4,7 +4,7 @@ pokedex.controller('pokedexCtrl', function ($http) {
   vm.status = "Loading...";
   $http({
     method: 'GET',
-    url: 'http://localhost:3000/kanto'
+    url: '/kanto'
     }).then(function (res) {
       vm.pkmns = res.data;
       vm.status = "";

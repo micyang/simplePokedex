@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var config = require('./config');
 var pkmnDbSetup = require('./controllers/seedController');
 var kantoPkmn = require('./controllers/pkmnController');
+var path = require('path');
 
 var port = process.env.PORT || 3000;
 
@@ -19,9 +20,9 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-
-
-
+//app.set('views', __dirname + '/public');
+// Start up Node on the server and serving the client... DERP
+app.use('/', express.static(path.join(__dirname, '../client')));
 // rootDirectoryRoute
 
 // Connect to mongooseDB

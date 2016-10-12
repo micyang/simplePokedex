@@ -30,17 +30,17 @@ module.exports = function(app) {
     })
   });
 
-  app.get('/national/pokemon', function(req, res) {
-    // Ping PKMN API logic.......
-    getPromise.promisePokemon('http://pokeapi.co/api/v2/pokemon/')
-    .then(function(firstPromise) {
-      // console.log("The first PROMISE:", firstPromise);
-      var data = JSON.parse(firstPromise.body);
-      console.log("The first PROMISE.body parsed:", data);
-      res.send(data);
-    })
-    .catch(function(err) {
-      console.error("Err! national pkdex", err);
-    })
-  });
+  // app.get('/national/pokemon', function(req, res) {
+  //   // Ping PKMN API logic.......
+  //   getPromise.promisePokemon('http://pokeapi.co/api/v2/pokemon/')
+  //   .then(function(firstPromise) {
+  //     // console.log("The first PROMISE:", firstPromise);
+  //     var data = JSON.parse(firstPromise.body);
+  //     console.log("The first PROMISE.body parsed:", data);
+  //     res.send(data);
+  //   })
+  //   .catch(function(err) {
+  //     console.error("Err! national pkdex", err);
+  //   })
+  // });
 };
