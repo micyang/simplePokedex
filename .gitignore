@@ -49,4 +49,5 @@ jspm_packages
 *.tgz
 
 # server config
-server/config/config.json
+# SHOULD ACTUALLY IGNORE FOR REAL PROJECTS
+# server/config/config.json
